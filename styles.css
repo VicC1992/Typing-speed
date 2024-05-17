@@ -1,0 +1,107 @@
+html {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+body {
+    background-image: url(images/EZZKDMBU0AIV5Xk.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: 100%;
+    margin: auto;
+}
+
+.backgroundDiv {
+    display: flex;
+    position: relative;
+    margin: auto;
+    background-position: 100%;
+    justify-content: center;
+    align-items: center;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+#mainText {
+    margin-top: 80px;
+    margin-left: 30px;
+    position: relative;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    width: 800px;
+    height: 250px;
+    border: 5px solid rgb(170, 114, 10);
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+
+#myInput {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    width: 600px;
+    height: 50px;
+    margin-left: 120px;
+    border: 5px solid rgb(170, 114, 10);
+    border-radius: 8px;
+}
+
+.score {
+    margin-top: 0px;
+    margin-left: 270px;
+    border: solid black;
+    width: 290px;
+    height: 60px;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 8px;
+    background-color: rgb(218, 230, 133);
+}
+
+.correctWords {
+    position: relative;
+    display: flex;
+    margin: 10px;
+    height: 49px;
+    width: 120px;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: rgb(28, 158, 163);
+}
+
+.time {
+    position: relative;
+    display: flex;
+    margin: 10px;
+    height: 49px;
+    width: 100px;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: rgb(28, 158, 163);
+}
+
+.green {
+    color: rgb(21, 220, 21);
+}
+
+.red {
+    color: red;
+}
+
+.button {
+    color: white;
+    background-color: greenyellow;
+    border-radius: 5px;
+    position: relative;
+    height: 40px;
+    margin-top: 50px;
+    margin-left: 350px;
+}
