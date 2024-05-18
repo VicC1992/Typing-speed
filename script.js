@@ -57,7 +57,7 @@ function setColor() {
         if (character == null) {
             spanCharacter.classList.remove("green");
             spanCharacter.classList.remove("red");
-        } else if (isLetter(character) || isSymbol(character)) {
+        } else if (isLetter(character) || isSymbol(character) || isSpace(character) && !isSpace(spanCharacter.innerText)) {
             if (character === spanCharacter.innerText) {
                 spanCharacter.classList.add("green");
                 ++lenghtCurrentWord;
@@ -66,7 +66,7 @@ function setColor() {
                 spanCharacter.classList.add("red");
                 ++lenghtCurrentWord;
             }
-        } else if (isSpace(character) && isSpace(spanCharacter.innerText)) {
+        } else if (isSpace(spanCharacter.innerText) && isSpace(character)) {
             if (correctCharacter === lenghtCurrentWord) {
                 ++correctWords;
             }
