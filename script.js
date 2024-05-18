@@ -104,12 +104,6 @@ function pause() {
     clearInterval(cron);
 }
 
-function reset() {
-    second = SIXTY;
-    millisecond = THOUSAND;
-    document.getElementById('second').innerText = '60';
-}
-
 function timer() {
     if ((millisecond -= TEN) == 0) {
         millisecond = THOUSAND;
