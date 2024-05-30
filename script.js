@@ -10,7 +10,7 @@ in computer science that develops and studies methods and software that enable
 machines to perceive their environment and uses learning and intelligence to 
 take actions that maximize their chances of achieving defined goals. Such 
 machines may be called AIs.`;
-text[1] = `In computer engineering, computer architecture is the conceptual 
+text[1] = `In computer engineering, computer architecture is the conceptual
 design and fundamental operational structure of a computer system. It is the 
 technical drawings and functional description of all design requirements, 
 it is how to design and implement various parts of a computer focusing largely 
