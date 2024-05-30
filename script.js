@@ -68,10 +68,7 @@ function setColor() {
     const arrayInputValue = inputChar.value.split('');
     arrayText.forEach((spanCharacter, index) => {
         const character = arrayInputValue[index];
-        if (character == null) {
-            spanCharacter.classList.remove("green");
-            spanCharacter.classList.remove("red");
-        } else if (isLetter(character) || isSymbol(character) || isSpace(character) &&
+        if (isLetter(character) || isSymbol(character) || isSpace(character) &&
          !isSpace(spanCharacter.innerText)) {
             if (character === spanCharacter.innerText) {
                 spanCharacter.classList.add("green");
