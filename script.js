@@ -72,12 +72,10 @@ function setColor() {
          !isSpace(spanCharacter.innerText)) {
             if (character === spanCharacter.innerText) {
                 spanCharacter.classList.add("green");
-                spanCharacter.classList.remove("red");
                 ++lenghtCurrentWord;
                 ++correctCharacter;
             } else if (character != spanCharacter.innerText) {
                 spanCharacter.classList.add("red");
-                spanCharacter.classList.remove("green");
                 ++lenghtCurrentWord;
             }
         } else if (isSpace(spanCharacter.innerText) && isSpace(character)) {
