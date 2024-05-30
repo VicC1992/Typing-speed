@@ -43,7 +43,7 @@ function isLetter(char) {
 }
 
 function isSymbol(char) {
-    if (char === "." || char === "," || char === "!" 
+    if (char === "." || char === "," || char === "!"
     || char === "?" || char === "-") {
         return 1;
     }
@@ -55,8 +55,10 @@ function isSpace(char) {
     }
 }
 
-inputChar.addEventListener("input", setColor);
-inputChar.addEventListener("input", start);
+inputChar.addEventListener("input", () => {
+    setColor();
+    start();
+});
 let spanCorrectWords = document.getElementById("words");
 
 //set color
@@ -68,16 +70,17 @@ function setColor() {
     const arrayInputValue = inputChar.value.split('');
     arrayText.forEach((spanCharacter, index) => {
         const character = arrayInputValue[index];
-        if (isLetter(character) || isSymbol(character) || isSpace(character) &&
+        if (character == null) {
+            spanCharacter.classList.remove("green", "red");
+        } else if (isLetter(character) || isSymbol(character) || isSpace(character) &&
          !isSpace(spanCharacter.innerText)) {
             if (character === spanCharacter.innerText) {
                 spanCharacter.classList.add("green");
-                ++lenghtCurrentWord;
                 ++correctCharacter;
-            } else if (character != spanCharacter.innerText) {
+            } else {
                 spanCharacter.classList.add("red");
-                ++lenghtCurrentWord;
             }
+            ++lenghtCurrentWord;
         } else if (isSpace(spanCharacter.innerText) && isSpace(character)) {
             if (correctCharacter === lenghtCurrentWord) {
                 ++correctWords;
