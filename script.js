@@ -4,22 +4,22 @@ const gameWindow = document.getElementById("buttonDiv");
 const timeDiv = document.querySelector(".time");
 //inputChar.value = null;
 const text = [];
-text[0] = `Artificial intelligence, in its broadest sense, is intelligence
-exhibited by machines, particularly computer systems. It is a field of research
-in computer science that develops and studies methods and software that enable
-machines to perceive their environment and uses learning and intelligence to
-take actions that maximize their chances of achieving defined goals. Such
-machines may be called AIs.`;
-text[1] = `In computer engineering, computer architecture is the conceptual
-design and fundamental operational structure of a computer system. It is the
-technical drawings and functional description of all design requirements,
-it is how to design and implement various parts of a computer focusing largely
-on the way by which the central processing unit operates internally and how it
-accesses addresses in memory.`;
-text[2] = `Programming refers to a technological process for telling a computer
-which tasks to perform in order to solve problems. You can think of programming
-as a collaboration between humans and computers, in which humans create
-instructions for a computer to follow in a language computers can understand.`;
+text[0] = "Artificial intelligence, in its broadest sense, is intelligence " +
+    "exhibited by machines, particularly computer systems. It is a field of research " +
+    "in computer science that develops and studies methods and software that enable " +
+    "machines to perceive their environment and uses learning and intelligence to " +
+    "take actions that maximize their chances of achieving defined goals. Such " +
+    "machines may be called AIs.";
+text[1] = "In computer engineering, computer architecture is the conceptual " +
+    "design and fundamental operational structure of a computer system. It is the " +
+    "technical drawings and functional description of all design requirements, " +
+    "it is how to design and implement various parts of a computer focusing largely " +
+    "on the way by which the central processing unit operates internally and how it " +
+    "accesses addresses in memory.";
+text[2] = "Programming refers to a technological process for telling a computer " +
+    "which tasks to perform in order to solve problems. You can think of programming " +
+    "as a collaboration between humans and computers, in which humans create " +
+    "instructions for a computer to follow in a language computers can understand.";
 
 function getRandomNumber(min, max) {
     const minCeiled = Math.ceil(min);
@@ -37,22 +37,16 @@ randomText.split('').forEach(character => {
 
 //letter, space or symbol?
 function isLetter(char) {
-    if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z")) {
-        return 1;
-    }
+    return ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z"));
 }
 
 function isSymbol(char) {
-    if (char === "." || char === "," || char === "!"
-    || char === "?" || char === "-") {
-        return 1;
-    }
+    return (char === "." || char === "," || char === "!"
+    || char === "?" || char === "-");
 }
 
 function isSpace(char) {
-    if (char === " ") {
-        return 1;
-    }
+    return (char === " ");
 }
 
 inputChar.addEventListener("input", () => {
